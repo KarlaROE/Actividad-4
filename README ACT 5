@@ -1,0 +1,70 @@
+Actividad 5:
+Proyecto de Machine Learning y NLP para la clasificación automática de intenciones financieras utilizando el dataset Bitext Wealth Management LLM Chatbot Training Dataset.
+
+Objetivo
+Desarrollar y evaluar modelos de aprendizaje automático capaces de identificar intenciones financieras dentro de conversaciones de gestión patrimonial, incorporando prácticas de optimización, validación y trazabilidad de experimentos.
+
+Dataset
+Fuente: Hugging Face
+
+bitext/Bitext-wealth-management-llm-chatbot-training-dataset
+Características principales:
+
+23,806 registros
+24 categorías de intención financiera
+Datos orientados a servicios de inversión y gestión patrimonial
+Metodología
+Preparación de Datos
+Eliminación de registros duplicados y valores nulos.
+Normalización de texto.
+Codificación de etiquetas mediante LabelEncoder.
+División estratificada de datos (80% entrenamiento, 20% prueba).
+Modelos Evaluados
+Logistic Regression
+Random Forest
+DistilBERT Fine-Tuning
+Optimización y Validación
+GridSearchCV para selección de hiperparámetros.
+Validación cruzada de 5 particiones.
+Evaluación mediante Accuracy, Precision, Recall y F1-Score.
+Trazabilidad y MLOps
+Registro de experimentos con MLflow.
+Seguimiento de parámetros, métricas y configuraciones de entrenamiento.
+Comparación y selección del mejor modelo.
+Resultados
+Modelo	Accuracy	F1-Score
+DistilBERT	0.9843	0.9842
+Random Forest	0.9826	0.9827
+Logistic Regression	0.9822	0.9822
+Modelo Seleccionado
+DistilBERT obtuvo el mejor desempeño general, alcanzando:
+
+Accuracy: 98.43%
+Precision: 98.48%
+Recall: 98.43%
+F1-Score: 98.42%
+Los resultados demuestran una alta capacidad de generalización y una clasificación precisa de las 24 intenciones financieras evaluadas.
+
+Tecnologías Utilizadas
+Python
+Scikit-Learn
+Hugging Face Transformers
+Hugging Face Datasets
+PyTorch
+MLflow
+Pandas
+Matplotlib
+Seaborn
+Estructura del Proyecto
+├── notebooks/
+│   └── actividad5.ipynb
+├── data/
+├── models/
+├── reports/
+├── README.md
+└── requirements.txt
+Conclusiones
+El proyecto permitió implementar un flujo completo de Machine Learning que abarca preparación de datos, ajuste de hiperparámetros, validación cruzada, entrenamiento supervisado y gestión de experimentos. DistilBERT fue seleccionado como modelo final al presentar el mejor equilibrio entre desempeño y capacidad de comprensión contextual para aplicaciones de clasificación de intenciones financieras.
+
+Autor: Karla María Rodríguez Esquivel
+Asignatura: Gestión de Proyectos de Inteligencia Artificial
